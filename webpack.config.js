@@ -12,13 +12,6 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.js$/,
-      },
-      {
-        test: /\.html/,
-        loader: 'raw-loader'
-      },
-      {
         test: /\.(sass|scss)$/,
         use: [
           isProduction
