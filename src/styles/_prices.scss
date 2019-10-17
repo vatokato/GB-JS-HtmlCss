@@ -1,0 +1,106 @@
+$primary-color: #000 !default;
+
+.prices {
+  padding: 50px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  color: #fff;
+
+  &-title {
+    text-align: center;
+    width: 100%;
+  }
+
+  &-offer {
+    border-radius: 8px;
+    background: $primary-color;
+    padding: 0 20px 20px;
+    min-width: 300px;
+    position: relative;
+    transition: top .3s;
+    will-change: top;
+    margin: 0 10px;
+    top: 0;
+
+    &:hover {
+      top: -4px
+
+    }
+
+  }
+
+  &-offer-title {
+    color: #fff;
+    font-size: 24px;
+    text-align: center;
+    margin: 10px 0;
+  }
+
+  &-price {
+    display: block;
+    background: #ffffff;
+    color: $primary-color;
+    font-size: 40px;
+    padding: 8px 0;
+    margin: 0 -18px;
+    text-align: center;
+  }
+
+  ol {
+    margin: 20px 0;
+    padding: 0;
+    list-style-position: inside;
+    font-size: 14px;
+
+    li {
+      margin: 0 0 4px;
+    }
+  }
+
+  &-btn {
+    display: block;
+    border-radius: 8px;
+    background: #ffffff;
+    margin-top: 20px;
+    font-size: 18px;
+    text-transform: uppercase;
+    color: $primary-color;
+    border: 0;
+    text-align: center;
+    transition: background .3s;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0;
+    outline: 0;
+    height: 40px;
+    cursor: pointer;
+
+    &:hover {
+      background: #e1e1e1;
+    }
+  }
+
+  @media screen and (max-width: 1200px) {
+    padding: 30px 15px;
+    &-offer {
+      min-width: auto;
+    }
+  }
+  @media screen and (max-width: 1050px) {
+    justify-content: center;
+    &-offer {
+      margin: 0 10px 20px;
+    }
+  }
+  @media screen and (max-width: 450px) {
+    &-offer {
+      width: 100%;
+      margin: 0 0 20px;
+      &:hover {
+        top: 0;
+      }
+    }
+  }
+}
