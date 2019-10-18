@@ -26,7 +26,6 @@ $primary-color: #000 !default;
 
     &:hover {
       top: -4px
-
     }
 
   }
@@ -79,6 +78,9 @@ $primary-color: #000 !default;
 
     &:hover {
       background: #e1e1e1;
+    }
+    &:active {
+      padding-top: 2px;
     }
   }
 
