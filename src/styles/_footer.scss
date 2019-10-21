@@ -1,0 +1,207 @@
+.footer {
+  background: $primary-color;
+  padding: 50px 50px 0;
+
+  .title {
+    color: #fff;
+    text-align: center;
+  }
+
+  &-info {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 40px;
+  }
+
+  &-form {
+    min-width: 500px;
+    margin-right: 40px;
+
+    .input-container {
+      margin-bottom: 20px;
+      position: relative;
+    }
+
+    input[type=text],
+    input[type=password],
+    input[type=email],
+    input[type=tel],
+    textarea {
+      width: 100%;
+      border-radius: 6px;
+      color: $primary-color;
+      border: 0;
+      background: #ffffff;
+      height: 40px;
+      outline: none;
+      padding: 0 10px;
+
+      &::placeholder {
+       color: #fff;
+      }
+
+      +label {
+        position: absolute;
+        transition: all .3s;
+        top: 10px;
+        left: 10px;
+        color: $primary-color;
+        cursor: default;
+      }
+
+      &:valid+label,
+      &:focus+label {
+        top: -15px;
+        font-size: 10px;
+        color: #fff;
+      }
+      &:focus::placeholder {
+        color: #aaa;
+      }
+
+      &[required] + label {
+        &:after {
+          content: "*";
+          color: red;
+        }
+      }
+    }
+    textarea {
+      height: 170px;
+      resize: none;
+      padding: 10px;
+    }
+
+
+    &-btn {
+      display: block;
+      border-radius: 6px;
+      background: #ffffff;
+      font-size: 18px;
+      font-weight: bold;
+      text-transform: uppercase;
+      color: $primary-color;
+      border: 0;
+      text-align: center;
+      transition: background .3s;
+      box-sizing: border-box;
+      padding: 0 50px;
+      outline: 0;
+      margin: 0 auto;
+      height: 40px;
+      cursor: pointer;
+
+      &:hover {
+        background: #e1e1e1;
+      }
+      &:active {
+        padding-top: 2px;
+      }
+    }
+  }
+
+  &-contacts {
+    min-width: 280px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+
+    &-item {
+      color: #fff;
+      text-decoration: none;
+      transition: color .3s;
+      white-space: nowrap;
+      margin-bottom: 15px;
+      &:hover {
+        color: #eee;
+      }
+      &:active {
+        color: #ccc;
+      }
+      &:before {
+        content: '';
+        display: inline-block;
+        margin-right: 6px;
+        vertical-align: middle;
+      }
+
+      &.skype:before {
+        background: url(../img/skype.png) no-repeat;
+        width: 24px;
+        height: 26px;
+      }
+      &.icq:before {
+        background: url(../img/icq.png) no-repeat;
+        width: 26px;
+        height: 26px;
+      }
+      &.email:before {
+        background: url(../img/email.png) no-repeat;
+        width: 22px;
+        height: 22px;
+      }
+      &.tel:before {
+        background: url(../img/tel.png) no-repeat;
+        width: 24px;
+        height: 23px;
+      }
+    }
+
+
+  }
+
+  .icon-block {
+    padding-top: 25px;
+    display: flex;
+    justify-content: flex-start;
+
+    a {
+      width: 43px;
+      height: 42px;
+      margin-right: 8px;
+    }
+    &-twitter {
+      background: url(../img/icon-twitter.png) no-repeat;
+    }
+    &-fb {
+      background: url(../img/icon-fb.png) no-repeat;
+    }
+    &-in {
+      background: url(../img/icon-in.png) no-repeat;
+    }
+    &-g {
+      background: url(../img/icon-g.png) no-repeat;
+    }
+    &-youtube {
+      background: url(../img/icon-youtube.png) no-repeat;
+    }
+  }
+
+  &-bottom-line {
+    color: $primary-color;
+    background: #ffffff;
+    text-align: center;
+    padding: 3px 0;
+    font-size: 12px;
+    margin: 0 -50px;
+  }
+
+  @media screen and (max-width: 950px) {
+    padding: 30px 15px 0;
+
+    &-info {
+      flex-direction: column;
+    }
+    &-form {
+      margin-right: 0;
+      margin-bottom: 20px;
+      min-width: 200px;
+    }
+    &-contacts {
+      align-items: center;
+    }
+    &-bottom-line {
+      margin: 0 -15px;
+    }
+  }
+}
